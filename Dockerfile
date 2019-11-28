@@ -6,5 +6,5 @@ RUN native-image --no-server -cp build/libs/kotlin-graal-*-all.jar
 
 FROM frolvlad/alpine-glibc
 EXPOSE 8080
-COPY --from=graalvm /home/app/kotlin-graal .
+COPY --from=graalvm /home/app/kotlin-graal/kotlin-graal .
 ENTRYPOINT ["./kotlin-graal"]
